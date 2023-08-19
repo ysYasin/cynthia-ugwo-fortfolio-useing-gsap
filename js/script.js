@@ -70,17 +70,20 @@ window.addEventListener('mousemove', function (data) {
 })
 /// mouse magic on second section
 document.querySelectorAll('.table').forEach(table => {
+    let rotet = 0;
+    let deffRot = 0;
     table.addEventListener('mousemove', function (posi) {
         let dff = posi.clientY - table.getBoundingClientRect().top;
-        console.log(dff)
         let cx = posi.clientX;
-
+        deffRot = cx - rotet;
+        rotet = cx
         gsap.timeline()
             .to(table.querySelector('img'), {
                 display: 'block',
                 ease: Power1,
                 y: gsap.utils.clamp(0, 150, dff),
-                x: cx
+                x: cx,
+                rotate: gsap.utils.clamp(-20, 20, deffRot * 0.4)
             })
             .to(table.querySelector('.tableItem'), {
                 X: 30,
