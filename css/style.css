@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    z-index: -3;
+}
+
+:root {
+    --pr-color: rgb(163, 163, 163);
+}
+
+#mouseCircle {
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    background: #ffffff;
+    position: abrgb(255, 255, 255)te;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    z-index: 9999;
+    opacity: 0;
+}
+
+.lfb {
+    overflow: hidden;
+    width: fit-content;
+}
+
+.lfi {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+header {
+    color: var(--pr-color);
+    width: 100%;
+    height: 100vh;
+    background: #00000000;
+    z-index: -1;
+
+}
+
+
+
+nav {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* cover Section styling  */
+.cover-section {
+    margin: 3rem 0 0 5rem;
+    cursor: default;
+
+}
+
+.cover-section h1 {
+    font-size: 11vw;
+    display: block;
+    text-transform: uppercase;
+}
+
+.Designer {
+    display: inline-block;
+
+}
+
+.Designer h1 {
+    margin-top: -13px;
+    margin-left: 6rem;
+}
+
+.Designer h3 {
+    text-transform: uppercase;
+    text-align: end;
+}
+
+/* avaiablity */
+.avaiablity {
+    width: 100%;
+    text-align: end;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.avaiablity h4 {
+    padding-top: 1rem;
+}
+
+/* header foot  */
+.header-foot {
+    width: 100%;
+    padding: 1.5vw 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-foot a {
+    text-decoration: none;
+    color: var(--pr-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    transition: all .5s ease-in;
+}
+
+.header-foot a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: start;
+    bottom: 0;
+    transition: all .5s ease-in;
+    right: 0;
+    background: var(--pr-color);
+}
+
+.header-foot a:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+
+}
+
+.header-foot a:hover span svg {
+    transform: rotate(32deg);
+}
+
+.up-and-down-arrow {
+    display: flex;
+    gap: 1rem;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #e4e4e4;
+    color: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: -2.7rem;
+    font-weight: 700;
+    transition: all .5s ease-in;
+
+}
+
+.circle:hover .icon-wraper {
+    margin-top: 2.6rem;
+
+}
+
+/* main styling  */
+main {
+    position: relative;
+    width: 100%;
+    background: #00000000;
+}
+
+.work-Table {
+    width: 100%;
+    padding: 10vh 10vw 5vh 3vw;
+
+}
+
+.table {
+    width: 100%;
+    border-top: 1px solid var(--pr-color);
+    color: var(--pr-color);
+    padding: 7vh 0.5vw;
+    padding-right: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.table:last-child {
+    border-bottom: 1px solid var(--pr-color);
+}
+
+.table h1 {
+    font-size: 6vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.table img:hover .lfb h1 {
+    transform: translateX(30px);
+    opacity: 0.5;
+}
+
+.table img {
+    position: absolute;
+    height: 140%;
+    z-index: 8;
+    display: none;
+    top: -60%;
+    left: -15%;
+
+}
+
+/* about section  */
+.about-section {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 2rem;
+    padding-top: 6rem;
+    display: flex;
+    gap: 4rem;
+    color: #fff;
+    align-items: center;
+    position: relative;
+}
+
+.about-img {
+    margin-left: auto;
+}
+
+.about-img img {
+    width: 15rem;
+
+}
+
+.about-text {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+    line-height: 1.9rem;
+    width: 40rem;
+    padding-right: 6vw;
+}
+
+.about-text h5 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    opacity: .8;
+    letter-spacing: .05em;
+    font-size: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.09rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-text a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid var(--pr-color);
+    padding: .5rem 2rem;
+    margin-top: 2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.about-text a:hover {
+    color: #000;
+    background: var(--pr-color);
+}
+
+/* modal start*/
+.modal-bg-all {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    width: 30rem;
+    height: 20rem;
+    background: #fff;
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-box input {
+    display: block;
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    outline: none;
+}
+
+.Button {
+    padding: 0.5rem 1.5rem;
+    background: #c8d84e;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 40px;
+    color: #000000;
+    margin: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background: #798236;
+}
+
+.close {
+    position: absolute;
+    top: -.5rem;
+    color: #000;
+    left: 93%;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/* modal end */
+
+footer {
+    background: #00000000;
+    padding-bottom: 3rem;
+    /* position: absolute; */
+    width: 100%;
+}
+
+.footer-text {
+    color: #e4e4e4;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    opacity: .8;
+    letter-spacing: .05em;
+    font-size: 1rem;
+}
+
+.foot {
+    padding: 2rem 2rem .5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--pr-color);
+    padding-top: 5rem;
+}
+
+.foot ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.foot ul li {
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+
+
+/* mobile friendly query */
+@media only screen and (max-width:688px) {
+    .cover-section {
+        margin: 7rem 0 0 2.5rem;
+    }
+
+    .cover-section h1 {
+        font-size: 15vw;
+    }
+
+    .Designer h1 {
+        margin-left: 1rem;
+    }
+
+    .Designer h3 {
+        font-size: .9rem;
+    }
+
+    .avaiablity {
+        margin-top: 5rem;
+    }
+
+    .avaiablity h4 {
+        padding-top: 0rem;
+    }
+
+    .up-and-down-arrow {
+        display: none;
+    }
+
+    .header-foot {
+        padding-top: 9rem;
+    }
+
+    .header-foot a {
+        font-size: 1.07rem;
+        gap: .1rem;
+    }
+
+    .work-Table {
+        padding: 0vh 10vw 5vh 3vw;
+    }
+
+    .table {
+        padding: 4vh 0.5vw;
+        height: auto;
+    }
+
+    .table h1 {
+        font-size: 12vw;
+    }
+
+    .about-section {
+        display: block;
+    }
+
+    .about-text {
+        width: 85vw;
+    }
+
+    .foot ul {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: .5rem;
+    }
+}
+
+@media only screen and (max-width:992px) and (min-width:689px) {
+    header {
+        height: auto;
+    }
+
+    .header-foot {
+        padding: 15vh 3vw 3vh;
+    }
+
+    .up-and-down-arrow {
+        display: none;
+    }
+
+    .table {
+        padding: 3vh 0.5vw
+    }
+
+    .about-section {
+        height: auto;
+    }
+}

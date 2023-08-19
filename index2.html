@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smooth Scrolling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section1">
+        <h1>Section 1</h1>
+        <a href="#section2">Scroll to Section 2</a>
+    </section>
+    <section id="section2">
+        <h1>Section 2</h1>
+        <a href="#section1">Scroll to Section 1</a>
+    </section>
+    <main>
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is the content of Section 1.</p>
+        </section>
+        <section id="section2">
+            <h2>Section 2</h2>
+            <p>This is the content of Section 2.</p>
+        </section>
+        <section id="section3">
+            <h2>Section 3</h2>
+            <p>This is the content of Section 3.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Basics Press. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
